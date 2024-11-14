@@ -446,6 +446,7 @@ class Ytmusic {
             parameter("service", "YouTube")
         }
 
+    // Get playlist from channel
     suspend fun playlist(playlistId: String) =
         httpClient.post("browse") {
             ytClient(YouTubeClient.WEB_REMIX, !cookie.isNullOrEmpty())
@@ -463,7 +464,7 @@ class Ytmusic {
             parameter("alt", "json")
         }
 
-    // Browse
+    // Browse channel
     suspend fun browse(
         client: YouTubeClient,
         browseId: String? = null, // Artist homepage

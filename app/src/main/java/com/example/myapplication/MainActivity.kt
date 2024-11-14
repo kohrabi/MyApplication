@@ -47,7 +47,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         val ytMusic = Ytmusic();
         runBlocking  {
-            val message = ytMusic.playlist("OLAK5uy_lrku1MxBO9YtnXfgi8tLik4mqXNXwXsdQ").body<String>();
+            val message = ytMusic.browse(YouTubeClient.WEB_REMIX, "UCo1DYcm1IZ9v3UPkpiAcgtg").body<String>();
+            // val message = ytMusic.browse(YouTubeClient.WEB_REMIX, "UCoZ16I1S9TANAK--fAyUQCA").body<String>();
             val maxLogSize = 1000;
             for (i in 0..message.length / maxLogSize) {
                 val start = i * maxLogSize;

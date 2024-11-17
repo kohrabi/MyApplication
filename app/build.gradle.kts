@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
     implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.1")
     // https://mvnrepository.com/artifact/org.brotli/dec
     implementation("org.brotli:dec:0.1.2")

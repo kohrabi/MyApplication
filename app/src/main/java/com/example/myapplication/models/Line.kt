@@ -1,6 +1,6 @@
 package com.example.myapplication.models
 
-data class Lyric (
+data class Line (
     val startSeconds : Float,
     val words : String,
 )

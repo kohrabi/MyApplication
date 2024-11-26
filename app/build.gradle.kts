@@ -50,25 +50,37 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
+    val activity_version = "1.9.3"
+
+    // Java language implementation
+    implementation(libs.androidx.activity)
+    // Kotlin
+    implementation(libs.androidx.activity.ktx)
+
+    val fragment_version = "1.8.5"
+
+    // Kotlin
+    implementation(libs.androidx.fragment.ktx)
+    // Compose
+    implementation(libs.androidx.fragment.compose)
+
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.1")
     // https://mvnrepository.com/artifact/org.brotli/dec
     implementation("org.brotli:dec:0.1.2")
     implementation("com.google.code.gson:gson:2.10.1")
 
-    val ktorVersion = "2.2.4";
-
-    implementation("io.ktor:ktor-client-core:$ktorVersion")
-    implementation("io.ktor:ktor-client-cio:$ktorVersion")
-    implementation("io.ktor:ktor-client-encoding:$ktorVersion")
-    implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
-    implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
-    implementation("io.ktor:ktor-serialization-kotlinx-xml:$ktorVersion")
-    implementation("io.ktor:ktor-serialization-kotlinx-protobuf:$ktorVersion")
-    implementation("io.ktor:ktor-server-compression:$ktorVersion")
-    implementation("io.ktor:ktor-io:$ktorVersion")
-    implementation("io.ktor:ktor-utils:$ktorVersion")
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.cio)
+    implementation(libs.ktor.client.encoding)
+    implementation(libs.ktor.client.okhttp)
+    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(libs.ktor.client.content.negotiation)
+    implementation(libs.ktor.serialization.kotlinx.xml)
+    implementation(libs.ktor.serialization.kotlinx.protobuf)
+    implementation(libs.ktor.server.compression)
+    implementation(libs.ktor.io)
+    implementation(libs.ktor.utils)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
